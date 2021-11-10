@@ -1,0 +1,21 @@
+<div class="container">
+<div class="row">
+<% @posts.each do |post| %>
+ 
+   <ul class="col-sm-4 post"  >
+   <li><%= link_to "#{post.title}", post  %></li>
+   <li><%= post.content %></li>
+   <li><%= post.url %></li>
+   <li><%= post.language %></li>
+   <li><%= link_to 'Destroy', post, method: :delete, data: { confirm: "本当に削除していいですか" } %></li>
+   </ul>
+   <% end %>
+   </div>
+   </div>
+
+   <br>
+
+   <%= link_to "new", new_post_path %>
+
+   <%#= link_to "#{post.title}", post %>
+   <%= link_to "#", @post %>
