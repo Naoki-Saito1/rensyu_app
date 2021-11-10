@@ -29,13 +29,16 @@
 <%= form.text_field :url%>
 </div>
 
+<br>
+<br>
 
 <div class="field">
 <%= form.label :language%>
-<%= form.select :language, Post.languages.keys.to_a %>
+<%= form.select :language, Post.languages.keys.to_a, { multiple: true} %>
 </div>
 
 <div class="actions">
   <%= form.submit %>
 </div>
 <% end %>
+
