@@ -3,6 +3,8 @@ class MessagesController < ApplicationController
     @conversation = Conversation.find(params[:conversation_id])
   end
   def index
+    @conversation
+    @conversations = Conversation.all
     # indexアクションに書かれたこれらの記載は、
     # 一つ一つの部分で何をしているかの理解をわかりやすくするために
     # このような記載にしていますが、実戦で用いるのには少々冗長なコードとなっているので
