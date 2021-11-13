@@ -1,6 +1,7 @@
 class ConversationsController < ApplicationController
   before_action :authenticate_user!
   def index
+    binding.irb
     @conversations = Conversation.all
   end
   def create

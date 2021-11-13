@@ -18,4 +18,6 @@ class Conversation < ApplicationRecord
       User.find(sender_id)
     end
   end
+
+  # @conversations.where(sender_id || recipient_id )
 end
